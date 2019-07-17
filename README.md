@@ -33,7 +33,7 @@ Use good code comparer to examine code removals
 Disclaimers:
 
 - The code quite old: from 2013-2014: I didn't check whether Roslyn or Cecil advanced since then so it could be optimized or wrutten in a better way
-- It was used in production but still may have some issues (including specific to your codebase/usage), so use at your own risk
+- It was used in production but still may have some issues (including specific to your codebase/usage), so use at your own risk and prefer canary release style with monitoring if possible
 - MSSQL DB was chosen as the one that already existed in our prod env, so feel free to adapt to the one you use if it differs
-
+- There are quite a lot todos inside, for example error logging (for method logger) is file-based (which can be inconvenient for troubleshooting) and far from perfect
 
