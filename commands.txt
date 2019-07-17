@@ -1,0 +1,6 @@
+LibWeaver.exe "c:\\sources\\theproject\\"
+
+LibWeaver.exe "c:\\sources\\theproject\\bin\\Debug\\"
+
+C:\sources\bin\Debug>TestLib.exe
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Note: the file must be deployed to c:\temp\_methodLoggerConfig.xml  -->
+<config>
+  <Enabled>true</Enabled>
+  <ConnectionString>Data Source=your_mssql_serever;Initial Catalog=your_db_name;Application Name=your_app_name;uid=your_user_with_write_perm;pwd=_the_password_;Connect Timeout=10;Min Pool Size=10</ConnectionString>
+  <PersistIntervalSec>10</PersistIntervalSec>
+  <ApproximateLoggersCount>5</ApproximateLoggersCount>
+  <ChunkSize>500</ChunkSize>
+</config> 

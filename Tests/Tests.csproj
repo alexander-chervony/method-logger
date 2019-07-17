@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4606919F-DF94-4872-AEB0-07AA1250D3C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tests</RootNamespace>
+    <AssemblyName>Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Cecil, Version=0.9.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Ploeh.AutoFixture">
+      <HintPath>..\packages\AutoFixture.3.16.5\lib\net40\Ploeh.AutoFixture.dll</HintPath>
+    </Reference>
+    <Reference Include="Ploeh.AutoFixture.AutoRhinoMock">
+      <HintPath>..\packages\AutoFixture.AutoRhinoMocks.3.16.5\lib\net40\Ploeh.AutoFixture.AutoRhinoMock.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Roslyn.Compilers, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Roslyn.Compilers.Common.1.2.20906.2\lib\net45\Roslyn.Compilers.dll</HintPath>
+    </Reference>
+    <Reference Include="Roslyn.Compilers.CSharp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Roslyn.Compilers.CSharp.1.2.20906.2\lib\net45\Roslyn.Compilers.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Roslyn.Services, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Roslyn.Services.Common.1.2.20906.2\lib\net45\Roslyn.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Roslyn.Services.CSharp">
+      <HintPath>..\packages\Roslyn.Services.CSharp.1.2.20906.2\lib\net45\Roslyn.Services.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Roslyn.Utilities, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Roslyn.Services.Common.1.2.20906.2\lib\net45\Roslyn.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IntegrationTestsYourSln2.cs" />
+    <Compile Include="CecilStringifierTest.cs" />
+    <Compile Include="IntegrationTests.Concurrency.cs" />
+    <Compile Include="IntegrationTestsBase.cs" />
+    <Compile Include="DeletionEvaluatorTest.cs" />
+    <Compile Include="IntegrationTestsYourSln1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionTestInfoProviders\ReflectionMethodInfoProvider.cs" />
+    <Compile Include="ReflectionTestInfoProviders\ReflectionMethodLister.cs" />
+    <Compile Include="ReflectionTestInfoProviders\ReflectionParameterInfoProvider.cs" />
+    <Compile Include="ReflectionStringfierTest.cs" />
+    <Compile Include="ReflectionTestInfoProviders\ReflectionTypeInfoProvider.cs" />
+    <Compile Include="RoslynStringifierTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeCleaner\CodeCleaner.csproj">
+      <Project>{e80773dd-95b7-431a-8b39-f635fcb7a278}</Project>
+      <Name>CodeCleaner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuration\Configuration.csproj">
+      <Project>{a244182b-c3a9-4958-8c17-3dcd20b75753}</Project>
+      <Name>Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibWeaver\LibWeaver.csproj">
+      <Project>{82ab7e19-f5c3-415e-b8eb-27965f1ef2e1}</Project>
+      <Name>LibWeaver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MethodLogger\MethodLogger.csproj">
+      <Project>{0b1124a6-8b31-42cf-85ad-3bca4f7b3b30}</Project>
+      <Name>MethodLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Stringification\Stringification.csproj">
+      <Project>{3ab3ef87-bd30-4a55-a93d-60fd60dcf7a7}</Project>
+      <Name>Stringification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestLib\TestLib.csproj">
+      <Project>{3d8ddd2c-4380-4e40-a9e8-7c3cb2b6fe18}</Project>
+      <Name>TestLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

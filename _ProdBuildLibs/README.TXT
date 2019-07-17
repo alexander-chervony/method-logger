@@ -1,0 +1,1 @@
+This dir must contain libs from production build that logs methods.
