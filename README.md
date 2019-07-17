@@ -1,7 +1,6 @@
-# method-logger
+# method logger
 A way to check which of the large codebase methods are used ad which ones are probably garbage.
-
-Intended to be used on legacy projects to cleanup the code. 
+Intended to be used on legacy .NET projects to delete not used code. 
 
 Steps:
 
