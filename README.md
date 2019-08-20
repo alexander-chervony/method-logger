@@ -1,6 +1,6 @@
-# method logger
-A way to check which of the large codebase methods are used ad which ones are probably garbage.
-Intended to be used on legacy .NET projects to delete not used code. 
+# method logger/cleaner
+A way to check which of the large codebase methods are used and which ones are probably garbage.
+Intended to be used on legacy .NET projects to delete not used code in (semi-)automated way. 
 
 Steps:
 
@@ -19,15 +19,15 @@ LibWeaver.exe "c:\\sources\\theproject\\bin\\Release\\"
 
 6. Wait while users click the clicks or other real life app usage accurs so really used methods got logged. Go through all known actual use cases for your application.
 
-7. Select from [LoggedMethods] to se whats going on
+7. Select from [LoggedMethods] table to se whats going on
 
-8. Now the fun part: within some time all code path that still alive should get logged in db .... aaaand we can delete other garbage methods and classes
+8. Now the fun part: within some time all code path that still alive should get logged in db .... aaaand we can delete other garbage methods and classes:
 
-Run CodeCleaner.exe to clean the code (run without params to see all options - there are quite a few including dry run and various filterings)
-Probably good aproach would be to remove pieces of code on by feature/project/module basis to avoid big bang
-Use good code comparer to examine code removals
+Run CodeCleaner.exe to clean the code (run without params to see all options - there are quite a few including dry run and various filterings).
 
-9. Proceed as you wish: either delete code and let complaining users reveal the pieces that still used or whatever
+Use good code comparer to examine code removals.
+
+Good aproach would be to remove pieces of code on by feature/project/module basis to avoid big bang (there are params in CodeCleaner that allow these kind of filterings to support the approach). So it requires several iterations/releases for the whole process.
 
 
 Disclaimers:
