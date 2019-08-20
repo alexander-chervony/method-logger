@@ -1,5 +1,5 @@
 # method logger/cleaner
-Combination of libs and tools to log methods that still got called and delete the ones that are not.
+Combination of libs and tools to log (into DB) methods that still got called and delete the ones that are not.
 Intended to be used on legacy .NET projects to delete not used code in (semi-)automated way. 
 
 Steps:
