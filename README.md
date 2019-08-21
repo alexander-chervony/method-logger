@@ -15,7 +15,7 @@ LibWeaver.exe "c:\\sources\\theproject\\bin\\Release\\"
 
 4. Deploy updated libraries (all content of your bin\Release including logger/facilitating libs) to your env
 
-5. Set <Enabled>false</Enabled> in c:\temp\_methodLoggerConfig.xml if something goes wrong or performance degraded beyond your expectations :-) (should be no more than 2x worse, however check first for your application, use canary release)
+5. Set <Enabled>false</Enabled> in c:\temp\\_methodLoggerConfig.xml if something goes wrong or performance degraded beyond your expectations :-) (should be no more than 2x worse, however check first for your application, use canary release)
 
 6. Wait while users click the clicks or other real life app usage accurs so really used methods got logged. Go through all known actual use cases for your application.
 
