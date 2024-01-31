@@ -34,4 +34,4 @@ Disclaimers:
 
 - It was used in production but still may have some issues (including specific to your codebase/usage), so use at your own risk and prefer canary release style with monitoring
 - MSSQL DB was chosen as the one that already existed in our prod env, so feel free to adapt to the one you use. For example, Redis maybe more suitable for the task (saving bool or count for a string key and manually(rarely) querying/filtering by string keys afterwards) 
-- There are quite a lot todos inside, not that much of the tests. There was some controversy around this project from management side, so it didn't got into polished state
+- There are quite a lot todos inside, not that much of the tests. There was some controversy around this project, so it didn't got into polished state
